@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	event := greeter.InitializeEvent("hello_world")
+	event := greeter.InitializeEvent("hello world")
 
 	event.Start()
 }
