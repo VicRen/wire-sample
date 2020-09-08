@@ -2,6 +2,7 @@ package greeter
 
 import (
 	"fmt"
+	"github.com/google/wire"
 )
 
 type Message struct {
@@ -40,3 +41,5 @@ func NewEvent(g Greeter) Event {
 		Greeter:g,
 	}
 }
+
+var NewSet = wire.NewSet(NewEvent, NewMessage, NewGreeter)
